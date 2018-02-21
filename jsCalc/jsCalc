@@ -1,0 +1,32 @@
+var num1 = 0;
+var num2 = 0;
+
+function add() {
+    var sum = num1 + num2;
+    return sum;
+}
+
+function subtract() {
+    var sum1 = num1 - num2;
+    return sum1;
+}
+
+function multiply() {
+    var sum2 = num1 * num2;
+    return sum2;
+}
+
+function divide() {
+    var sum3 = num1 / num2;
+    return sum3;
+}
+
+function driver() {
+    num1 = getNumber();
+    num2 = getNumber();
+    console.log('your sum of ' + num1 + ' and ' + num2 + ' is ' + add());
+    console.log('your difference of ' + num1 + ' and ' + num2 + ' is ' + subtract());
+    console.log('your product of ' + num1 + ' and ' + num2 + ' is ' + multiply());
+    console.log('your division of ' + num1 + ' and ' + num2 + ' is ' + divide());
+
+}
