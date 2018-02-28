@@ -1,9 +1,9 @@
 function startFunction() {
-	var player1num = prompt("Player 1 please enter your number.");
+	var player1num = parseInt(prompt("Player 1 please enter your number."));
 	while (player1num < 0) {
 		player1num = prompt("Player 1 please enter a positive number.");
 	}
-	var player2num = prompt("Player 2 please enter what you think player 1's number is.");
+	var player2num = parseInt(prompt("Player 2 please enter what you think player 1's number is."));
 	var guess = 1;
 	
 
@@ -11,7 +11,7 @@ function startFunction() {
 		if (player2num > player1num) {
 			player2num = prompt("You guessed incorrectly. " + player2num + " is too high. Try again.")
 		}
-		if (player2num < player1num) {
+		else if (player2num < player1num) {
 			player2num = prompt("You guessed incorrectly. " + player2num + " is too low. Try again.")
 		}	
 		guess++;
