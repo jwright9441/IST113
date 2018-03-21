@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#page {
+    height: 45vh;
+}
+#button {
+    height: 10vh;
+    width: 200px;
+    margin: 0 auto;
+    background-color: darkgray;
+}
+#switch {
+    width:40px;
+    height:10vh;
+    background-color: lightgray;
+    float:left;
+    text-align: center;
+}
