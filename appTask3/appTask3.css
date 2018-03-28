@@ -1,0 +1,30 @@
+#app {
+  width: 500px;
+  background-color: #DDDDDD;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: auto;
+}
+#appTitle {
+  text-align: center;
+}
+#field {
+  text-align: center;
+}
+#listDiv {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px;
+  background-color: #FFFFFF;
+}
+em {
+  font-size: 20px;
+}
+li {
+  width: 400px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+li button {
+  float: right;
+}
