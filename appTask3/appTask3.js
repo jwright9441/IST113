@@ -16,9 +16,6 @@ function runApp() {
     createItem("List Goes Here");
   }
 
-
-
-
   //button
   $("#buttonElement").on("click", function() {
 
@@ -27,8 +24,6 @@ function runApp() {
 
     //call create item function
     createItem(taskValue);
-
-    //delete items
 
 
 /*
@@ -63,9 +58,12 @@ function runApp() {
 
   });
 
+}
+
+
   //create items function
   function createItem(itemValue) {
-    $newElem = $("<li></li>").text(itemValue);
+    let $newElem = $("<li></li>").text(itemValue);
     $("#taskList").append($newElem);
 
     //delete button
@@ -73,14 +71,7 @@ function runApp() {
     {
       text: "delete",
       click: function() {
-        let itemText = $(this.parentNode).text();
-        let index = myItems.indexOf(itemText);
-
-        if(index != -1) {
-          myItems.splice(index, 1);
-          saveItems();
-        }
-
+        removeItem($newElem);
         $(this.parentNode).remove();
 
       }
@@ -88,7 +79,13 @@ function runApp() {
    $newElem.append(delButton);
   }
 
+  function removeItem(item) {
 
+    let index = item.index();
+    myItems.splice(index, 1);
+    saveItems();
+
+  }
 
   //save items function
   function saveItems() {
@@ -96,8 +93,12 @@ function runApp() {
     localStorage.setItem(myKey, myItemsString);
   }
 
+  $("#delAll").on("click", function() {
+    myItems = [];
+    $("ul").empty();
+    saveItems();
+  })
 
-}
 
 //run the app
 $(function() {

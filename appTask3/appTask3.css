@@ -28,3 +28,6 @@ li {
 li button {
   float: right;
 }
+#delAll {
+  margin: 20px;
+}
