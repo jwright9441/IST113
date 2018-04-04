@@ -36,13 +36,15 @@ li button {
 
 .my-form {
   visibility: hidden;
-  background-color: #F6F7F8;
-  border: 1px solid #D6D9DC;
-  border-radius: 3px;
+  background-color: #EEEEEE;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 500px;
+  margin: auto;
+}
 
-  width: 80%;
-  padding: 50px;
-  margin: 0 0 40px 0;
+#formButton {
+  margin: 20px;
 }
 
 
@@ -70,7 +72,13 @@ li button {
 
 .form-row {
   flex-direction: row;
-  align-items: flex-start; /* To avoid stretching */
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  flex-direction: row;
+  align-items: flex-start;
   margin-bottom: 20px;
 }
 .form-row input[type='text'] {
@@ -82,11 +90,4 @@ li button {
   width: 120px;
   margin-top: 7px;
   padding-right: 20px;
-}
-}
-
-/* Change this rule */
-.form-row input[type='text'] {
-background-color: #FFFFFF;
-/* ... */
 }
