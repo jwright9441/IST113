@@ -1,0 +1,73 @@
+@{
+    string email = "email";
+    string userName = "username";
+    int posted = 0;
+
+    if (IsPost)
+    {
+        email = Request["email"];
+        userName = Request["full-name"];
+        posted = 1;
+    }
+
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="appTask5.css">
+</head>
+<div id="app">
+    <h1 id="appTitle">JavaScript Task Manager App<br /><em>made with jQuery and JSON!</em></h1>
+    <fieldset id="field">
+        <input type="text" id="taskInput" name="taskInput" />
+        <button id="buttonElement">Add Task</button>
+    </fieldset>
+
+    <hr />
+    <div id=listDiv>
+        <p>Task List:</p>
+        <ul id="taskList"></ul>
+    </div>
+
+    <button id="delAll">Delete All Tasks</button>
+    <hr>
+
+    <button type="button" id='formButton'>Show/Hide contact form</button>
+
+</div>
+
+<body onload="razorReload('@email', '@userName', '@posted')">
+
+    <form action='' method='post' class='my-form'>
+        <div class='form-row'>
+            <label for='full-name'>Name</label>
+            <input id='full-name' name='full-name' type='text' />
+        </div>
+
+        <div class='form-row'>
+            <label for='email'>Email</label>
+            <input id='email' name='email' type='email' placeholder='joe@example.com' />
+        </div>
+
+        <div class='form-row'>
+            <label for='message'>Message</label>
+            <textarea id='message' name='message'></textarea>
+            <div class='instructions'>Leave feedback here</div>
+        </div>
+
+        <div class='form-row'>
+            <button>Submit</button>
+        </div>
+
+    </form>
+
+
+
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="appTask5.js"></script>
+</body>
+</html>
