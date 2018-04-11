@@ -87,13 +87,13 @@ function runApp() {
   })
 
 //Razor Reload Function
-function razorReload(email, uName, posted) {
+function razorReload(posted, email, uName) {
     if (posted == 1) {
         alert("Submitted\nEmail: " + email + "\nUser Name: " + uName);
     }
-    else {
-        alert("welcome!");
-    }
+    //else {
+    //    alert("welcome!");
+    //}
 }
 
 
